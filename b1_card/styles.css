@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    width: 320px;
+    height: 400px;
+    background-color: #272d40;
+    border-radius: 15px;
+}
+
+.card:hover .card-selection {
+    transform: translateY(-20px);
+    opacity: 1;
+
+}
+
+.card:hover .card__product-img-wrap {
+    transform: translateY(-100px) rotate(-20deg);
+}
+
+.card:hover .card__product-info-name {
+    transform: translate(-37px, -60px);
+}
+
+.card:hover .card__product-info-price {
+    transform: translate(-112px, -60px);
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 4px 20px;
+}
+
+.card__header-icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card__product-img-wrap {
+    transition: transform linear 0.3s;
+}
+
+.card__product-img {
+    width: 80%;
+    height: 170px;
+    display: block;
+    margin-left: 14px;
+}
+
+.card__product-info {
+}
+
+.card__product-info-name {
+    color: #4daf54;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform linear 0.3s;
+}
+
+.card__product-info-price {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    padding-top: 12px;
+    transition: transform linear 0.3s;
+
+}
+
+.card-selection {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.4s ease-in, opacity 0.4s ease-in ;
+}
+
+.card__size h3 {
+    color: #fff;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0 12px 0 20px;
+}
+
+.card__size span {
+    color: #272d40;
+    background-color: #dadada;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.card__color {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.card__color h3 {
+    color: #fff;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0 12px 0 20px;
+}
+
+.green,
+.red,
+.black {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.green {
+    background: green;
+}
+
+.red {
+    background: red;
+}
+
+.black {
+    background: black;
+}
+
+.card__btn {
+    display: flex;
+}
+
+.card__btn div {
+    background-color: #4daf54;
+    color: #fff;
+    padding: 10px 18px;
+    margin-left: 20px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
