@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="alert">Press any key</div>
+        <div class="key-information">
+            <div class="key-number">18</div>
+            <div class="key-detail">
+                <div class="card key-name">
+                    <p>Key</p>
+                    <p>Alt</p>
+                </div>
+                <div class="card key-location">
+                    <p>Location</p>
+                    <p>1</p>
+                </div>
+                <div class="card key-which">
+                    <p>Which</p>
+                    <p>18</p>
+                </div>
+                <div class="card key-code">
+                    <p>Code</p>
+                    <p>AltLeft</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let $ = document.querySelector.bind(document)
+        let keyNumber = document.querySelector('.key-number')
+        let keyName = document.querySelector('.key-name p:last-child')
+        let keyLocation = document.querySelector('.key-location p:last-child')
+        let keyWhich = document.querySelector('.key-which p:last-child')
+        let keyCode = document.querySelector('.key-code p:last-child')
+        let alert = document.querySelector('.alert')
+        let keyInformation = document.querySelector('.key-information')
+        document.onkeydown = (e) => {
+            alert.style.display = 'none'
+            keyInformation.style.display = 'block'
+            keyNumber.innerHTML = e.which
+            keyName.innerHTML = e.key
+            keyLocation.innerHTML = e.location
+            keyWhich.innerHTML = e.which
+            keyCode.innerHTML = e.code
+            
+        }
+    </script>
+</body>
+</html>
